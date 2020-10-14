@@ -19,9 +19,9 @@
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
-      <button *ngIf="!isLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">
+      <button *ngIf="!isLogged" class="btn btn-outline-success my-2 my-sm-0" routerLink="/login" type="submit">
         <i class="fas fa-sign-in-alt"></i> Iniciar Sesión</button>
-        <button *ngIf="isLogged" class="btn btn-outline-danger my-2 my-sm-0" (click)="onLogOut()">
+        <button *ngIf="isLogged" class="btn btn-outline-danger my-2 my-sm-0" (click)="onLogOut()" type="reset">
           <i class="fas fa-sign-in-alt"></i>
           <i class="fas fa-door-open"></i> Cerrar Sesión</button>
     </form>
