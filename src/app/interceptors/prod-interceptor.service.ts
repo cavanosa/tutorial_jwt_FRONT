@@ -38,10 +38,8 @@ export class ProdInterceptorService implements HttpInterceptor {
           intReq = this.addToken(req, data.token);
           return next.handle(intReq);
         }));
-      } else if(err.status === 403) {
-        this.tokenService.logOut();
-        return throwError(err);
       } else {
+        this.tokenService.logOut();
         return throwError(err);
       }
     }));
