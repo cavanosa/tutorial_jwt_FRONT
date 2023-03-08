@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/']);
       },
       err => {
-        this.errMsj = err.error.message;
+        this.errMsj = err.error.mensaje;
         this.toastr.error(this.errMsj, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });

@@ -33,7 +33,7 @@ export class RegistroComponent implements OnInit {
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       data => {
-        this.toastr.success('Cuenta Creada', 'OK', {
+        this.toastr.success(data.mensaje, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
 
